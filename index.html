@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAT Music - Noticias del Mundo Musical</title>
+   
+    <!-- Enlace al CSS (ajusta la ruta si tu index.html está en la raíz) -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER CON MENÚ DESPLEGABLE
+         ========================================== -->
+    <header class="header">
+        <div class="header__container">
+            <!-- Logo corregido para que se vea BAT y MUSIC -->
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo__bat">BAT</span>
+                    <span class="logo__music">MUSIC</span>
+                </a>
+            </div>
+            
+            <!-- Botón hamburguesa -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+
+            <!-- Menú de navegación -->
+                      <!-- Menú de navegación -->
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="#inicio" class="nav__link nav__link--active">Inicio</a></li>
+                    <li><a href="#tendencias" class="nav__link">Tendencias</a></li>
+                    <li><a href="#noticias" class="nav__link">Noticias</a></li>
+                    <li><a href="#entrevistas" class="nav__link">Entrevistas</a></li>
+                    <li><a href="#eventos" class="nav__link">Eventos</a></li>
+                    <!-- ENLACE CORREGIDO: Apunta al archivo ventas.html -->
+                    <li><a href="ventas.html" class="nav__link">🎟️ Entradas</a></li>
+                </ul>
+            </nav>
+
+            <button class="header__search">🔍</button>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         SLIDER PRINCIPAL
+         ========================================== -->
+    <section class="slider" id="inicio">
+        <div class="slider__slides">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide__overlay"></div>
+                <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=1600" alt="Festival de música">
+                <div class="slide__content">
+                    <span class="slide__tag">🔥 Destacado</span>
+                    <h1 class="slide__title">Los festivales más esperados del 2026</h1>
+                    <p class="slide__description">Descubre la agenda completa de los eventos musicales que marcarán este año.</p>
+                    <a href="leermas.html" class="slide__btn">Leer más →</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide__overlay"></div>
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1600" alt="Artista en concierto">
+                <div class="slide__content">
+                    <span class="slide__tag">🎤 Exclusiva</span>
+                    <h1 class="slide__title">Nueva era del pop latino: los artistas que dominan</h1>
+                    <p class="slide__description">Un recorrido por los nombres que están redefiniendo el género.</p>
+                    <a href="leermas1.html" class="slide__btn">Leer más →</a>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide__overlay"></div>
+                <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=1600" alt="Guitarra eléctrica">
+                <div class="slide__content">
+                    <span class="slide__tag">🎸 Rock</span>
+                    <h1 class="slide__title">El regreso del rock alternativo</h1>
+                    <p class="slide__description">Bandas legendarias vuelven a los escenarios con giras mundiales.</p>
+                    <a href="leermas2.html" class="slide__btn">Leer más →</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider__controls">
+            <button class="slider__arrow slider__arrow--prev">‹</button>
+            <div class="slider__dots">
+                <span class="slider__dot active" data-slide="0"></span>
+                <span class="slider__dot" data-slide="1"></span>
+                <span class="slider__dot" data-slide="2"></span>
+            </div>
+            <button class="slider__arrow slider__arrow--next">›</button>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN TENDENCIAS
+         ========================================== -->
+    <section class="tendencias" id="tendencias">
+        <div class="section-header">
+            <h2 class="section-title">🔥 Tendencias Musicales</h2>
+            <p class="section-subtitle">Lo más sonado de la semana</p>
+        </div>
+        <div class="tendencias__grid">
+            <article class="tendencia-card">
+                <div class="tendencia-card__number">01</div>
+                <div class="tendencia-card__info">
+                    <span class="tendencia-card__genre">Pop</span>
+                    <h3 class="tendencia-card__title">Midnight Dreams</h3>
+                    <p class="tendencia-card__artist">Luna Vega</p>
+                </div>
+                <div class="tendencia-card__stats">
+                    <span class="tendencia-card__plays">▶ 45.2M</span>
+                    <span class="tendencia-card__trend trend-up">↑ 12%</span>
+                </div>
+            </article>
+            <article class="tendencia-card">
+                <div class="tendencia-card__number">02</div>
+                <div class="tendencia-card__info">
+                    <span class="tendencia-card__genre">Reggaetón</span>
+                    <h3 class="tendencia-card__title">Fuego en la Pista</h3>
+                    <p class="tendencia-card__artist">El Relámpago</p>
+                </div>
+                <div class="tendencia-card__stats">
+                    <span class="tendencia-card__plays">▶ 38.7M</span>
+                    <span class="tendencia-card__trend trend-up">↑ 8%</span>
+                </div>
+            </article>
+            <article class="tendencia-card">
+                <div class="tendencia-card__number">03</div>
+                <div class="tendencia-card__info">
+                    <span class="tendencia-card__genre">Indie</span>
+                    <h3 class="tendencia-card__title">Ecos del Silencio</h3>
+                    <p class="tendencia-card__artist">The Velvet Rooms</p>
+                </div>
+                <div class="tendencia-card__stats">
+                    <span class="tendencia-card__plays">▶ 22.1M</span>
+                    <span class="tendencia-card__trend trend-up">↑ 23%</span>
+                </div>
+            </article>
+            <article class="tendencia-card">
+                <div class="tendencia-card__number">04</div>
+                <div class="tendencia-card__info">
+                    <span class="tendencia-card__genre">Electrónica</span>
+                    <h3 class="tendencia-card__title">Neon Pulse</h3>
+                    <p class="tendencia-card__artist">DJ Aurora</p>
+                </div>
+                <div class="tendencia-card__stats">
+                    <span class="tendencia-card__plays">▶ 19.8M</span>
+                    <span class="tendencia-card__trend trend-down">↓ 3%</span>
+                </div>
+            </article>
+            <article class="tendencia-card">
+                <div class="tendencia-card__number">05</div>
+                <div class="tendencia-card__info">
+                    <span class="tendencia-card__genre">Rock</span>
+                    <h3 class="tendencia-card__title">Rebeldes Sin Causa</h3>
+                    <p class="tendencia-card__artist">Los Truenos</p>
+                </div>
+                <div class="tendencia-card__stats">
+                    <span class="tendencia-card__plays">▶ 15.4M</span>
+                    <span class="tendencia-card__trend trend-up">↑ 5%</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TRES ÁREAS INFORMATIVAS
+         ========================================== -->
+    <section class="areas" id="noticias">
+        <div class="section-header">
+            <h2 class="section-title">📰 Información Musical</h2>
+            <p class="section-subtitle">Todo lo que necesitas saber en tres áreas</p>
+        </div>
+
+        <div class="areas__grid">
+            <!-- ÁREA 1: NOTICIAS -->
+            <div class="area">
+                <div class="area__header">
+                    <span class="area__icon">📢</span>
+                    <h3 class="area__title">Últimas Noticias</h3>
+                </div>
+                <div class="area__content">
+                    <article class="news-item">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400" alt="Concierto">
+                        <div class="news-item__info">
+                            <span class="news-item__date">11 Sep 2026</span>
+                            <h4 class="news-item__title">Anuncian gira mundial de Taylor Swift</h4>
+                            <p class="news-item__desc">La artista confirmará fechas en 30 ciudades durante 2027.</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://images.unsplash.com/photo-1611339555312-e607c8d27fd4?w=400" alt="Streaming">
+                        <div class="news-item__info">
+                            <span class="news-item__date">10 Sep 2026</span>
+                            <h4 class="news-item__title">Spotify supera los 700M de usuarios</h4>
+                            <p class="news-item__desc">La plataforma alcanza un nuevo récord histórico.</p>
+                        </div>
+                    </article>
+                    <article class="news-item">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400" alt="Grammy">
+                        <div class="news-item__info">
+                            <span class="news-item__date">09 Sep 2026</span>
+                            <h4 class="news-item__title">Nuevos talentos en los Grammy 2026</h4>
+                            <p class="news-item__desc">Reveladas las nominaciones más sorprendentes del año.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ÁREA 2: ENTREVISTAS -->
+            <div class="area" id="entrevistas">
+                <div class="area__header">
+                    <span class="area__icon">🎙️</span>
+                    <h3 class="area__title">Entrevistas</h3>
+                </div>
+                <div class="area__content">
+                    <article class="interview-item">
+                        <div class="interview-item__avatar">RM</div>
+                        <div class="interview-item__info">
+                            <h4 class="interview-item__name">Rosalía Martínez</h4>
+                            <p class="interview-item__quote">"La música flamenca es mi raíz y mi futuro."</p>
+                            <a href="#" class="interview-item__link">Leer entrevista completa →</a>
+                        </div>
+                    </article>
+                    <article class="interview-item">
+                        <div class="interview-item__avatar">JB</div>
+                        <div class="interview-item__info">
+                            <h4 class="interview-item__name">Javi Beats</h4>
+                            <p class="interview-item__quote">"Producir es contar historias sin palabras."</p>
+                            <a href="#" class="interview-item__link">Leer entrevista completa →</a>
+                        </div>
+                    </article>
+                    <article class="interview-item">
+                        <div class="interview-item__avatar">AC</div>
+                        <div class="interview-item__info">
+                            <h4 class="interview-item__name">Ana Cruz</h4>
+                            <p class="interview-item__quote">"Cada canción es un pedazo de mi alma."</p>
+                            <a href="#" class="interview-item__link">Leer entrevista completa →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- ÁREA 3: EVENTOS -->
+            <div class="area" id="eventos">
+                <div class="area__header">
+                    <span class="area__icon">🎪</span>
+                    <h3 class="area__title">Próximos Eventos</h3>
+                </div>
+                <div class="area__content">
+                    <article class="event-item">
+                        <div class="event-item__date-box">
+                            <span class="event-item__day">15</span>
+                            <span class="event-item__month">SEP</span>
+                        </div>
+                        <div class="event-item__info">
+                            <h4 class="event-item__title">Lollapalooza Argentina</h4>
+                            <p class="event-item__location">📍 Buenos Aires, Argentina</p>
+                            <span class="event-item__price">Desde $85</span>
+                        </div>
+                    </article>
+                    <article class="event-item">
+                        <div class="event-item__date-box">
+                            <span class="event-item__day">22</span>
+                            <span class="event-item__month">SEP</span>
+                        </div>
+                        <div class="event-item__info">
+                            <h4 class="event-item__title">Primavera Sound</h4>
+                            <p class="event-item__location">📍 Barcelona, España</p>
+                            <span class="event-item__price">Desde €120</span>
+                        </div>
+                    </article>
+                    <article class="event-item">
+                        <div class="event-item__date-box">
+                            <span class="event-item__day">05</span>
+                            <span class="event-item__month">OCT</span>
+                        </div>
+                        <div class="event-item__info">
+                            <h4 class="event-item__title">Coachella 2027</h4>
+                            <p class="event-item__location">📍 California, USA</p>
+                            <span class="event-item__price">Desde $499</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <div class="logo">
+                    <span class="logo__bat">BAT</span>
+                    <span class="logo__music">MUSIC</span>
+                </div>
+                <p class="footer__desc">Tu fuente #1 de noticias, tendencias y eventos del mundo musical.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Secciones</h4>
+                <a href="#noticias">Noticias</a>
+                <a href="#tendencias">Tendencias</a>
+                <a href="#entrevistas">Entrevistas</a>
+                <a href="#eventos">Eventos</a>
+            </div>
+            <div class="footer__links">
+                <h4>Síguenos</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+                <a href="#">Spotify</a>
+            </div>
+            <div class="footer__links">
+                <h4>Legal</h4>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 BAT Music. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script src="../js/app.js"></script>
+
+</body>
+</html>

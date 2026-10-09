@@ -1,0 +1,859 @@
+```css
+/* =========================================================
+   SECCIÓN POP LATINO — DISEÑO PREMIUM
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. VARIABLES
+   --------------------------------------------------------- */
+
+:root {
+    --pop-pink: #ff006e;
+    --pop-purple: #8338ec;
+    --pop-blue: #3a86ff;
+    --pop-yellow: #ffbe0b;
+    --pop-cyan: #00d4ff;
+
+    --pop-dark: #080812;
+    --pop-card: rgba(22, 22, 45, 0.85);
+    --pop-text: #ffffff;
+    --pop-muted: #b8b8c7;
+
+    --pop-radius: 24px;
+    --pop-transition: 0.4s ease;
+}
+
+
+/* =========================================================
+   2. HERO PRINCIPAL
+   ========================================================= */
+
+.artists-hero {
+    min-height: 520px;
+    padding: 150px 20px 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 0, 110, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(58, 134, 255, 0.35),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(131, 56, 236, 0.4),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #080812,
+            #17102d,
+            #0b1630
+        );
+}
+
+
+/* Líneas decorativas */
+
+.artists-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+    );
+
+    animation: gridMove 15s linear infinite;
+}
+
+
+/* Brillo central */
+
+.artists-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 0, 110, 0.12);
+
+    filter: blur(100px);
+
+    animation: heroGlow 6s ease-in-out infinite alternate;
+}
+
+
+/* Animaciones */
+
+@keyframes gridMove {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+
+@keyframes heroGlow {
+
+    from {
+        transform: scale(0.8);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+
+/* =========================================================
+   3. CONTENIDO DEL HERO
+   ========================================================= */
+
+.artists-hero h1 {
+
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.9;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff006e,
+            #ffbe0b,
+            #00d4ff,
+            #8338ec
+        );
+
+    background-size: 300% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    animation: titleGradient 6s linear infinite;
+
+    filter:
+        drop-shadow(0 10px 30px rgba(255, 0, 110, 0.3));
+}
+
+
+@keyframes titleGradient {
+
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
+
+
+.artists-hero p {
+
+    position: relative;
+    z-index: 2;
+
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    color: var(--pop-muted);
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Línea decorativa */
+
+.artists-hero p::after {
+
+    content: "";
+
+    display: block;
+
+    width: 80px;
+    height: 4px;
+
+    margin: 30px auto 0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pop-pink),
+            var(--pop-purple)
+        );
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 110, 0.6);
+}
+
+
+/* =========================================================
+   4. CONTENEDOR DE ARTISTAS
+   ========================================================= */
+
+.artist-grid {
+
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+
+    padding: 90px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+
+/* =========================================================
+   5. TARJETA DEL ARTISTA
+   ========================================================= */
+
+.artist-card {
+
+    position: relative;
+
+    display: flex;
+
+    min-height: 320px;
+
+    overflow: hidden;
+
+    border-radius: var(--pop-radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30, 30, 55, 0.95),
+            rgba(13, 13, 28, 0.95)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.35);
+
+    transition:
+        transform var(--pop-transition),
+        border-color var(--pop-transition),
+        box-shadow var(--pop-transition);
+}
+
+
+/* Borde luminoso */
+
+.artist-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 1px;
+
+    border-radius: var(--pop-radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent,
+            rgba(255,0,110,0.5),
+            rgba(131,56,236,0.4),
+            transparent
+        );
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    opacity: 0;
+
+    transition: opacity var(--pop-transition);
+}
+
+
+/* Hover */
+
+.artist-card:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.01);
+
+    border-color:
+        rgba(255,0,110,0.5);
+
+    box-shadow:
+        0 25px 70px rgba(255,0,110,0.15),
+        0 0 40px rgba(131,56,236,0.1);
+}
+
+
+.artist-card:hover::before {
+
+    opacity: 1;
+}
+
+
+/* =========================================================
+   6. IMAGEN DEL ARTISTA
+   ========================================================= */
+
+.artist-card img {
+
+    width: 340px;
+    min-height: 320px;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+
+.artist-card:hover img {
+
+    transform: scale(1.08);
+
+    filter:
+        brightness(1.08)
+        saturate(1.2);
+}
+
+
+/* Degradado sobre imagen */
+
+.artist-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 340px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 60%,
+            rgba(13,13,28,0.8)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   7. INFORMACIÓN DEL ARTISTA
+   ========================================================= */
+
+.artist-info {
+
+    position: relative;
+    z-index: 2;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex: 1;
+}
+
+
+.artist-info h3 {
+
+    margin: 0 0 15px;
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 3.2rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #ffbe0b
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* =========================================================
+   8. GÉNERO MUSICAL
+   ========================================================= */
+
+.artist-info .artist-genre {
+
+    width: fit-content;
+
+    margin-bottom: 22px;
+
+    padding: 8px 18px;
+
+    border-radius: 50px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,0,110,0.18),
+            rgba(131,56,236,0.18)
+        );
+
+    border:
+        1px solid rgba(255,0,110,0.4);
+
+    font-size: 0.8rem;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 5px 20px rgba(255,0,110,0.1);
+}
+
+
+/* =========================================================
+   9. DESCRIPCIÓN
+   ========================================================= */
+
+.artist-info p {
+
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #bcbccc;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   10. DETALLE DECORATIVO
+   ========================================================= */
+
+.artist-info::before {
+
+    content: "POP LATINO";
+
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    color: rgba(255,255,255,0.04);
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 4rem;
+
+    letter-spacing: 4px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   11. BOTÓN VOLVER
+   ========================================================= */
+
+.btn-back {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 20px auto 100px;
+
+    padding: 16px 35px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--pop-pink),
+            var(--pop-purple)
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 10px 35px rgba(255,0,110,0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efecto de brillo */
+
+.btn-back::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.3),
+            transparent
+        );
+
+    transition: left 0.6s ease;
+}
+
+
+.btn-back:hover::before {
+
+    left: 100%;
+}
+
+
+.btn-back:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 45px rgba(255,0,110,0.5);
+}
+
+
+/* =========================================================
+   12. SELECCIÓN DE TEXTO
+   ========================================================= */
+
+::selection {
+
+    background: var(--pop-pink);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   13. SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+
+    background: #080812;
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            var(--pop-pink),
+            var(--pop-purple)
+        );
+}
+
+
+/* =========================================================
+   14. RESPONSIVE — TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .artist-card img {
+
+        width: 280px;
+    }
+
+    .artist-card::after {
+
+        width: 280px;
+    }
+
+    .artist-info {
+
+        padding: 35px;
+    }
+
+    .artist-info h3 {
+
+        font-size: 2.7rem;
+    }
+}
+
+
+/* =========================================================
+   15. RESPONSIVE — MÓVILES
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .artists-hero {
+
+        min-height: 450px;
+
+        padding:
+            110px 20px
+            70px;
+    }
+
+
+    .artists-hero h1 {
+
+        font-size: 4rem;
+
+        letter-spacing: 3px;
+    }
+
+
+    .artists-hero p {
+
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+
+    .artist-grid {
+
+        width: 92%;
+
+        padding: 60px 0;
+
+        gap: 25px;
+    }
+
+
+    .artist-card {
+
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+
+    .artist-card img {
+
+        width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+    }
+
+
+    .artist-card::after {
+
+        width: 100%;
+
+        height: 300px;
+
+        bottom: auto;
+
+        background:
+            linear-gradient(
+                0deg,
+                rgba(13,13,28,0.8),
+                transparent
+            );
+    }
+
+
+    .artist-info {
+
+        padding: 30px 25px 35px;
+    }
+
+
+    .artist-info h3 {
+
+        font-size: 2.4rem;
+
+        letter-spacing: 2px;
+    }
+
+
+    .artist-info p {
+
+        font-size: 0.95rem;
+    }
+
+
+    .artist-info::before {
+
+        font-size: 2.5rem;
+
+        top: 15px;
+        right: 20px;
+    }
+}
+
+
+/* =========================================================
+   16. MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .artists-hero h1 {
+
+        font-size: 3.2rem;
+    }
+
+
+    .artist-card img {
+
+        height: 250px;
+
+        min-height: 250px;
+    }
+
+
+    .artist-info h3 {
+
+        font-size: 2rem;
+    }
+
+
+    .btn-back {
+
+        padding: 14px 28px;
+    }
+}
+
+
+/* =========================================================
+   17. REDUCIR ANIMACIONES SI EL USUARIO LO PREFIERE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}
+```

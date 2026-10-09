@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas de Festivales - BAT Music</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/ventas.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none;">
+                    <span class="logo__bat">BAT</span>
+                    <span class="logo__music">MUSIC</span>
+                </a>
+            </div>
+            
+            <div class="header__right">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+                <button class="header__search">🔍</button>
+            </div>
+
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Inicio</a></li>
+                    <li><a href="index.html#tendencias" class="nav__link">Tendencias</a></li>
+                    <li><a href="index.html#noticias" class="nav__link">Noticias</a></li>
+                    <li><a href="index.html#entrevistas" class="nav__link">Entrevistas</a></li>
+                    <li><a href="ventas-festivales.html" class="nav__link nav__link--active">Entradas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO DE VENTAS -->
+    <section class="ventas-hero">
+        <div class="ventas-hero__content">
+            <span class="ventas-hero__tag">🎟️ Entradas Oficiales</span>
+            <h1 class="ventas-hero__title">VENTA DE ENTRADAS<br>FESTIVALES 2026</h1>
+            <p class="ventas-hero__subtitle">Asegura tu lugar en los mejores eventos musicales del año. Entradas 100% oficiales con garantía.</p>
+            <div class="ventas-hero__stats">
+                <div class="stat">
+                    <span class="stat__number">50+</span>
+                    <span class="stat__label">Festivales</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">1M+</span>
+                    <span class="stat__label">Entradas vendidas</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__number">100%</span>
+                    <span class="stat__label">Garantizado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTROS DE GALERÍA -->
+    <section class="filtros-section">
+        <div class="filtros-container">
+            <button class="filtro-btn active" data-filter="todos">Todos</button>
+            <button class="filtro-btn" data-filter="pop">Pop</button>
+            <button class="filtro-btn" data-filter="rock">Rock</button>
+            <button class="filtro-btn" data-filter="electronica">Electrónica</button>
+            <button class="filtro-btn" data-filter="latino">Latino</button>
+        </div>
+    </section>
+
+    <!-- GALERÍA INTERACTIVA DE FESTIVALES -->
+    <section class="galeria-ventas">
+        <div class="galeria-grid">
+            
+            <!-- Festival 1: Coachella -->
+            <article class="festival-card" data-category="pop">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800" alt="Coachella 2026" onerror="this.src='https://via.placeholder.com/800x400/ff2d55/ffffff?text=Coachella+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="1">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-hot">🔥 Hot</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Coachella 2026</h3>
+                    <p class="festival-card__location">📍 Indio, California, USA</p>
+                    <p class="festival-card__date">📅 10-12 y 17-19 Abril, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">$499</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">$999</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 2: Tomorrowland -->
+            <article class="festival-card" data-category="electronica">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800" alt="Tomorrowland 2026" onerror="this.src='https://via.placeholder.com/800x400/5e17eb/ffffff?text=Tomorrowland+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="2">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-new">✨ Nuevo</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Tomorrowland 2026</h3>
+                    <p class="festival-card__location">📍 Boom, Bélgica</p>
+                    <p class="festival-card__date">📅 17-19 y 24-26 Julio, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">€299</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">€699</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 3: Glastonbury -->
+            <article class="festival-card" data-category="rock">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?w=800" alt="Glastonbury 2026" onerror="this.src='https://via.placeholder.com/800x400/ffb800/ffffff?text=Glastonbury+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="3">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-sold">⚡ Últimas</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Glastonbury 2026</h3>
+                    <p class="festival-card__location">📍 Somerset, Reino Unido</p>
+                    <p class="festival-card__date"> 24-28 Junio, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">£335</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">£750</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 4: Lollapalooza -->
+            <article class="festival-card" data-category="pop">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800" alt="Lollapalooza 2026" onerror="this.src='https://via.placeholder.com/800x400/ff2d55/ffffff?text=Lollapalooza+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="4">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-hot">🔥 Hot</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Lollapalooza 2026</h3>
+                    <p class="festival-card__location">📍 Chicago, USA</p>
+                    <p class="festival-card__date"> 30 Julio - 2 Agosto, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">$385</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">$850</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 5: Primavera Sound -->
+            <article class="festival-card" data-category="rock">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800" alt="Primavera Sound 2026" onerror="this.src='https://via.placeholder.com/800x400/5e17eb/ffffff?text=Primavera+Sound+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="5">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-new">✨ Nuevo</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Primavera Sound 2026</h3>
+                    <p class="festival-card__location">📍 Barcelona, España</p>
+                    <p class="festival-card__date">📅 28 Mayo - 1 Junio, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">€220</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">€450</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 6: Vive Latino -->
+            <article class="festival-card" data-category="latino">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800" alt="Vive Latino 2026" onerror="this.src='https://via.placeholder.com/800x400/ffb800/ffffff?text=Vive+Latino+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="6">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-hot">🔥 Hot</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Vive Latino 2026</h3>
+                    <p class="festival-card__location">📍 Ciudad de México, México</p>
+                    <p class="festival-card__date"> 14-15 Marzo, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">$2,500 MXN</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">$5,800 MXN</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 7: Ultra Music Festival -->
+            <article class="festival-card" data-category="electronica">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800" alt="Ultra Music Festival 2026" onerror="this.src='https://via.placeholder.com/800x400/00d4ff/ffffff?text=Ultra+Music+Festival'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="7">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-sold">⚡ Últimas</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Ultra Music Festival</h3>
+                    <p class="festival-card__location">📍 Miami, USA</p>
+                    <p class="festival-card__date"> 27-29 Marzo, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">$399</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">$899</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 8: Rock in Rio -->
+            <article class="festival-card" data-category="rock">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=800" alt="Rock in Rio 2026" onerror="this.src='https://via.placeholder.com/800x400/ff2d55/ffffff?text=Rock+in+Rio+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="8">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-new">✨ Nuevo</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Rock in Rio 2026</h3>
+                    <p class="festival-card__location"> Río de Janeiro, Brasil</p>
+                    <p class="festival-card__date">📅 12-21 Septiembre, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">R$ 650</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">R$ 1,400</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+            <!-- Festival 9: Estéreo Picnic -->
+            <article class="festival-card" data-category="latino">
+                <div class="festival-card__image">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800" alt="Estéreo Picnic 2026" onerror="this.src='https://via.placeholder.com/800x400/ffb800/ffffff?text=Estereo+Picnic+2026'">
+                    <div class="festival-card__overlay">
+                        <button class="festival-card__btn-ver" data-festival="9">Ver detalles</button>
+                    </div>
+                    <span class="festival-card__badge badge-hot">🔥 Hot</span>
+                </div>
+                <div class="festival-card__info">
+                    <h3 class="festival-card__title">Estéreo Picnic 2026</h3>
+                    <p class="festival-card__location">📍 Bogotá, Colombia</p>
+                    <p class="festival-card__date">📅 19-22 Marzo, 2026</p>
+                    <div class="festival-card__pricing">
+                        <div class="price-tier">
+                            <span class="tier-label">General</span>
+                            <span class="tier-price">$450,000 COP</span>
+                        </div>
+                        <div class="price-tier">
+                            <span class="tier-label">VIP</span>
+                            <span class="tier-price">$950,000 COP</span>
+                        </div>
+                    </div>
+                    <button class="festival-card__btn-comprar">Comprar entradas →</button>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- MODAL DE DETALLES -->
+    <div class="modal" id="festival-modal">
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close">✕</button>
+            <div class="modal__body">
+                <div class="modal__image">
+                    <img src="" alt="" id="modal-img">
+                </div>
+                <div class="modal__info">
+                    <h2 class="modal__title" id="modal-title"></h2>
+                    <p class="modal__location" id="modal-location"></p>
+                    <p class="modal__date" id="modal-date"></p>
+                    <div class="modal__lineup">
+                        <h3>Line-up destacado:</h3>
+                        <ul id="modal-lineup"></ul>
+                    </div>
+                    <div class="modal__pricing">
+                        <h3>Precios:</h3>
+                        <div class="modal__price-options" id="modal-prices"></div>
+                    </div>
+                    <button class="modal__btn-comprar">Comprar ahora →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <div class="logo">
+                    <span class="logo__bat">BAT</span>
+                    <span class="logo__music">MUSIC</span>
+                </div>
+                <p class="footer__desc">Tu fuente #1 de noticias, tendencias y eventos del mundo musical.</p>
+            </div>
+            <div class="footer__links">
+                <h4>Secciones</h4>
+                <a href="index.html#noticias">Noticias</a>
+                <a href="index.html#tendencias">Tendencias</a>
+                <a href="index.html#entrevistas">Entrevistas</a>
+                <a href="ventas-festivales.html">Entradas</a>
+            </div>
+            <div class="footer__links">
+                <h4>Síguenos</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div class="footer__links">
+                <h4>Legal</h4>
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 BAT Music. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+    <script src="../js/ventas.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* =========================================
+   SECCIÓN DE FESTIVALES (BAT Music)
+   ========================================= */
+
+/* 1. Hero / Encabezado de la sección */
+.festivals-hero {
+    background: linear-gradient(135deg, #1a0a2e 0%, #16213e 100%); /* Degradado oscuro elegante */
+    padding: 120px 20px 80px; /* Espaciado amplio arriba y abajo */
+    text-align: center; /* Centrar texto */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Línea sutil separadora */
+}
+
+.festivals-hero h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Tipografía impactante para títulos */
+    font-size: 4rem; /* Tamaño grande */
+    margin: 0;
+    letter-spacing: 3px; /* Espaciado entre letras */
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(255, 77, 77, 0.3); /* Sombra roja sutil */
+}
+
+.festivals-hero p {
+    color: #cccccc; /* Gris claro para buena legibilidad */
+    font-size: 1.2rem;
+    margin-top: 15px;
+    max-width: 600px; /* Limitar ancho para que no se estire demasiado */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* 2. Grid contenedor de las tarjetas */
+.festival-grid {
+    display: grid; /* Activar CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas: mínimo 300px, se ajustan al espacio */
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 60px 20px; /* Espaciado interno de la sección */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el grid en la pantalla */
+}
+
+/* 3. Tarjeta individual de festival */
+.festival-card {
+    background: #1a1a2e; /* Fondo oscuro para la tarjeta */
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave al pasar el mouse */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borde muy sutil */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.festival-card:hover {
+    transform: translateY(-10px); /* La tarjeta sube un poco */
+    box-shadow: 0 15px 30px rgba(255, 77, 77, 0.15); /* Resplandor rojo sutil */
+}
+
+/* 4. Imagen dentro de la tarjeta */
+.festival-card img {
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    height: 220px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Recorta la imagen para que no se deforme */
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+/* 5. Información dentro de la tarjeta */
+.festival-info {
+    padding: 25px; /* Espaciado interno del texto */
+}
+
+.festival-info h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.festival-info .date {
+    color: #ff4d4d; /* Color de acento rojo de la marca */
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block; /* Para que ocupe su propia línea */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.festival-info p {
+    color: #999999; /* Texto secundario más tenue */
+    line-height: 1.6; /* Altura de línea para facilitar la lectura */
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* 6. Botón de "Volver al Inicio" */
+.btn-back {
+    display: inline-block;
+    margin: 20px auto 80px; /* Margen superior, centrado, y margen inferior grande */
+    padding: 14px 35px;
+    background: transparent; /* Fondo transparente */
+    border: 2px solid #ff4d4d; /* Borde rojo */
+    color: #ff4d4d; /* Texto rojo */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    border-radius: 30px; /* Bordes muy redondeados (tipo píldora) */
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Transición suave para el hover */
+    text-align: center;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn-back:hover {
+    background: #ff4d4d; /* El fondo se vuelve rojo */
+    color: #ffffff; /* El texto se vuelve blanco */
+    box-shadow: 0 5px 20px rgba(255, 77, 77, 0.4); /* Resplandor al hacer hover */
+}
+
+/* =========================================
+   RESPONSIVE (Adaptación a móviles)
+   ========================================= */
+@media (max-width: 768px) {
+    .festivals-hero {
+        padding: 80px 20px 50px; /* Reducir espaciado en móviles */
+    }
+    
+    .festivals-hero h1 {
+        font-size: 2.8rem; /* Título más pequeño en móviles */
+    }
+    
+    .festivals-hero p {
+        font-size: 1rem;
+    }
+    
+    .festival-grid {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+        padding: 40px 15px;
+    }
+}
